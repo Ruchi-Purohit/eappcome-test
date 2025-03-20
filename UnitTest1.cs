@@ -32,6 +32,7 @@ namespace TestProject1
             IWebDriver driver = new ChromeDriver();
             // Navigate to URL
             driver.Navigate().GoToUrl("http://eaapp.somee.com");
+            driver.Manage().Timeouts().ImplicitWait= TimeSpan.FromSeconds(5);
             IWebElement loginlink = driver.FindElement(By.LinkText("Login"));
             loginlink.Click();
            // IWebDriver txtUserName
